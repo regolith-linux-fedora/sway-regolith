@@ -47,7 +47,7 @@ patch: .fedora-patched
 	touch $@
 
 build: .fedora-patched
-	test -f $(BUILDDIR)/build.ninja || meson setup $(BUILDDIR) --prefix=$(PREFIX) --libdir=$(LIBDIR) --sysconfdir=$(SYSCONFDIR) $(MESON_FLAGS) -Ddefault-wallpaper=false -Da11y=enabled
+	test -f $(BUILDDIR)/build.ninja || meson setup $(BUILDDIR) --prefix=$(PREFIX) --libdir=$(LIBDIR) --sysconfdir=$(SYSCONFDIR) $(MESON_FLAGS) -Dwerror=false -Ddefault-wallpaper=false -Da11y=enabled
 	meson compile -C $(BUILDDIR)
 
 .PHONY: check
