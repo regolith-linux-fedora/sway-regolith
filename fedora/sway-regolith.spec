@@ -55,7 +55,8 @@ Suggests:       swayidle
 Suggests:       swaylock
 Suggests:       xdg-desktop-portal-gtk
 Suggests:       xdg-desktop-portal-wlr
-Provides:       sway
+Provides:       sway = %{version}-%{release}
+Conflicts:      sway
 
 %description
 sway (SirCmpwn's Wayland compositor) is a tiling Wayland compositor and a
